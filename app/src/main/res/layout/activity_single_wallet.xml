@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/wallet_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20,000,00 DAu"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/wallet_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lojava"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/wallet_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lojava"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            >
+            <Button
+                android:id="@+id/delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:padding="10dp"
+                android:backgroundTint="@color/red"
+                android:layout_margin="10dp"
+                />
+            <Button
+                android:id="@+id/copy_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copy"
+                android:padding="10dp"
+                android:backgroundTint="@color/black"
+                android:layout_margin="10dp"
+                />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/receiver_address_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Receiver address"
+            android:padding="10dp"
+            />
+        <EditText
+            android:id="@+id/amount_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            android:padding="10dp"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/private_key_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Private key"
+            android:padding="10dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/transfer_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transfer"
+                android:padding="10dp"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/chain_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chain_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="5"
+            tools:listitem="@layout/transaction_list_item" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
